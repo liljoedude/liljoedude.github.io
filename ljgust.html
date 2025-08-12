@@ -1,7 +1,22 @@
 <title>LJGust</title>
 <link type="image/png" rel="shortcut icon" href="favicon.ico" />
 <body style="background-color: #99ccff;" />
-<style>
+  <h1 style="position: absolute; left: 50px;" id="counter">Loading...</h1>
+<script>
+  const countid = document.getElementById('counter');
+  setInterval(newtime, 10);
+  function newtime() {
+    let now = new Date()
+    let DN =  5 - now.getDay();
+    let HN = 24 - now.getHours();
+    let MN = 60 - now.getMinutes();
+    let SN = 60 - now.getSeconds();
+    
+  countid.innerHTML = "Next game drop in: " + DN + " : " + HN + " : " + MN + " : " + SN + "!"
+}
+setInterval(newtime, 999);
+</script>
+  <style>
 .parent {
 display: flex;
 justify-content: left;
@@ -51,21 +66,6 @@ text-align: center;
 ">Hello, fellow Li'l Joes! This is the place to relieve your bordom at school. At school, almost everything is blocked. From Poki to EagelerCraft. You can't escape from the wrath of Blocksi. Unless, you use this website. Give all of your trust in LJGust, for it can't be blocked for more than 7 days. But whenever it gets blocked I'll just make a new website. Notify me on my discord channel if it gets blocked <a style="
 color: #ffffcc;
 " href="https://discord.gg/wtXQqpgqRf">>>Link Here<<</a>. So get going and play some games on LJGust!</p>
-  <h1 style="position: absolute; left: 50px;" id="counter">Loading...</h1>
-<script>
-  const countid = document.getElementById('counter');
-  setInterval(newtime, 10);
-  function newtime() {
-    let now = new Date()
-    let DN =  5 - now.getDay();
-    let HN = 24 - now.getHours();
-    let MN = 60 - now.getMinutes();
-    let SN = 60 - now.getSeconds();
-    
-  countid.innerHTML = "Next game drop in: " + DN + " : " + HN + " : " + MN + " : " + SN + "!"
-}
-setInterval(newtime, 999);
-</script>
   <div class="parent">
   <div style="
 border: 5px solid #0c9999;
