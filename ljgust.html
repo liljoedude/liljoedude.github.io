@@ -29,14 +29,13 @@ border-radius: 5%;
 }
 </style>
     <script>
-  const countid = document.getElementById('counter');
   function newtime() {
     let now = new Date()
     let DN =  5 - now.getDay();
     let HN = 24 - now.getHours();
     let MN = 60 - now.getMinutes();
     let SN = 60 - now.getSeconds();
-  countid.innerHTML = "Next game drop: " + DN + " : " + HN + " : " + MN + " : " + SN + "!"
+  document.getElementById('counter').innerHTML = "Next game drop: " + DN + " : " + HN + " : " + MN + " : " + SN + "!"
 }
 setInterval(newtime, 999);
 </script>
