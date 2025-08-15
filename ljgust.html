@@ -29,15 +29,19 @@ border-radius: 5%;
 }
 </style>
     <script>
-  function newtime() {
-    let now = new Date()
     let DN =  5 - now.getDay();
     let HN = 24 - now.getHours();
     let MN = 60 - now.getMinutes();
     let SN = 60 - now.getSeconds();
+    function newtime() {
+    now = new Date()
+    DN =  5 - now.getDay();
+    HN = 24 - now.getHours();
+    MN = 60 - now.getMinutes();
+    SN = 60 - now.getSeconds();
   document.getElementById('counter').innerHTML = "Next game drop: " + DN + " : " + HN + " : " + MN + " : " + SN + "!"
 }
-setInterval(newtime, 999);
+setInterval(newtime, 1000);
 </script>
   <h1 style="
 border: 5px solid #0c9999 ;
