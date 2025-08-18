@@ -34,6 +34,17 @@ font-size: 20px;
 font-family:'Tahoma', sans-serif;
 ">
 <p id="text1">Slap the binini</p>
+  <button onclick="re();" style="background-color: #ffff73;
+border: none;
+width: 200px;
+height: 200px;
+font-family:'Tahoma', sans-serif;
+cursor: pointer;
+position: absolute;
+left: 1px;">
+  Rebrith
+   Cost: 1,000,000,000,000
+  </button>
 </div>
 <div style="
 display: flex;
@@ -62,6 +73,7 @@ const bgm2 = new Audio("Sounds/Jazzy_Note_Blocks.mp3");
 let banis = 0;
 let banpow = 1;
 let banpows = 0
+let r = 1
 
 /*Buttons*/
 function yee() {
@@ -82,7 +94,7 @@ bgm2.loop = true;
 function bpc(add, cost) {
 if(banis > (cost - 1)) {
 banis -= cost;
-banpow += add;
+banpow += add * r;
 elem1.innerHTML = "you have: " + banis + " baninis";
 elem2.innerHTML = "Bininis per click: " + banpow;
 click.play();
@@ -91,7 +103,7 @@ click.play();
 function bps(add, cost) {
 if(banis > (cost - 1)) {
 banis -= cost;
-banpows += add;
+banpows += add * r;
 elem1.innerHTML = "you have: " + banis + " baninis";
 elem3.innerHTML = "Bininis per second: " + banpows;
 click.play();
@@ -103,6 +115,12 @@ title.style.visibility = "hidden";
 function callsecond() {
 banis += banpows;
 elem1.innerHTML = "you have: " + banis + " baninis";
+}
+function re() {
+  if(banis > 1000000000000) {
+  banis = 0;
+  re += 1;
+  }
 }
 setInterval(callsecond, 1000);
 </script>
